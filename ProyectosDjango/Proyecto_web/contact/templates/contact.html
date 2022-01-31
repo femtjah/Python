@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="page-section clearfix">
+    <div class="container" style="background-color: rgba(24, 64, 8, 0.8); border-radius: 10px; padding: 1px;">  
+        {% if "valido" in request.GET %}
+            <p style="color: white;">Formulario enviado</p>
+        {% endif %}
+        <form action="" method="post" style="text-align: center;">
+             {% csrf_token %}
+            <table style="color: white; margin: 20px auto;">{{miForms.as_table}}</table>
+            <input type="submit" value="Enviar" style="width: 150px;">     
+        </form>   
+    </div>
+</section>
+ 
+{% endblock %}
