@@ -1,12 +1,12 @@
 
 class Car:
     def __init__(self, request):
-        self.request=request
+        '''self.request=request
         self.session=request.session
         car=self.session.get("car")
         if not car:
             car=self.session["car"]={}
-        #else:
+        #else:'''
         self.car=car
 
     def add_car(self, product):
